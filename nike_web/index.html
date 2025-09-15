@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
+  <style type="text/tailwindcss">
+      .grid-items{
+          @apply flex overflow-x-auto snap-x snap-mandatory h-80 rounded-2xl shadow-lg bg-white items-center justify-center
+      }
+      .headline {
+        @apply mb-70 bg-blue-500 w-6/6 flex items-center justify-center text-2xl text-white font-mono
+      }
+  </style>
   <body class="bg-gray-50">
     
     <!-- Navbar -->
@@ -31,7 +39,7 @@
             </a>
           </li>
           <li>
-            <a href="product.html" 
+            <a href="#product" 
                class="px-4 py-2 rounded-xl bg-white/20 backdrop-blur-md border border-white/30 text-white hover:bg-white/30 hover:scale-105 transition-all duration-300 shadow-md">
               Product
             </a>
@@ -68,10 +76,19 @@
   <img src="image/nike9.webp" alt="Nike Shoes 3" class="w-full h-full object-contain snap-center flex-shrink-0" />
   <img src="image/nike7.webp" alt="Nike Shoes 4" class="w-full h-full object-contain snap-center flex-shrink-0" />
 </div>
-
-
-      
     </section>
     
+    <div class="flex grid grid-cols-3 gap-4 items-center justify-center mx-6 my-5" id="product">
+      <div class="grid-items">
+        <h1 class="headline">Sports</h1>
+      </div>
+      <div class="grid-items">
+        <h1 class="headline">Sneakers</h1>
+      </div>
+      <div class="grid-items">
+        <h1 class="headline">Both</h1>
+      </div>
+    </div>
+
   </body>
 </html>
